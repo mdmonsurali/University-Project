@@ -1,0 +1,31 @@
+
+install.packages(tidyverse)
+library(tidyverse)
+
+meter_readings_expert_homework=read.csv("C:/Users/proth/Desktop/Data Mining/meter_readings_export_homework.csv")
+
+
+View(meter_readings_expert_homework)
+
+x1= select ( meter_readings_expert_homework,PODID=pod_id,reading=BILLED_METER_READING,date=ACTUAL_DATE_OF_METER_READING)
+
+select PODID=pod_id,reading=BILLED_METER_READING,date=ACTUAL_DATE_OF_METER_READING from meter_readings_expert_homework
+
+x2=arrange(x1,PODID,as.Date(date,format="%d/%m/%Y"))
+
+x2$date=as.Date(x2$date,format="%m/%d/%Y")
+
+x2 = x2[order(x2$PODID, x2$date),]
+
+x3=group_by(x2,PODID) %>%mutate(prevread=lag(reading),prevdate=lag(date))  
+x3$dateDiff=x3$date-x3$prevdate 
+x3$readingDiff=as.numeric(x3$reading-x3$prevread)
+
+metering_points_homework=read.csv("C:/Users/proth/Desktop/Data Mining/metering_points_homework.csv")
+head(metering_points_homework)
+p1= select ( metering_points_homework,PODID=pod_id,LONG=LONG,LAT=LAT)
+joinedTable=left_join(x3,p1,by="PODID")
+
+View(joinedTable)
+
+

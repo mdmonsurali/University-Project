@@ -1,0 +1,16 @@
+data ordering:
+
+stulevel <- stulevel[order(stulevel$grade, stulevel$ability) , ]
+
+
+x1<-select(fmeter_readings_export_homework,PODID=pod_id,reading=BILLED_METER_READING,readdate=ACTUAL_DATE_OF_METER_READING)
+View(x3)
+x2<-arrange(x1,PODID,as.Date(readdate,format="%d/%m/%Y"))
+x3<-group_by(x2,PODID)%>%mutate(prevread=lag(reading),prevdate=lag(readdate))%>%mutate(consumption=reading-prevread,datediff=as.numeric(as.Date(readdate, format="%d/%m/%Y")-as.Date(prevdate, format="%d/%m/%Y")))%>%mutate(year_con=round(consumption*365/datediff,0))%>%drop_na(year_con)%>%filter(prevread<=reading,datediff>30,datediff<401)
+View(x3)
+x3
+
+
+
+File = file3("podid = pod_id", "readingbill=BILLED_METER_READING", 
+"date=ACTUAL_DATE_OF_METER_READING", "postalcode=pod_postal_code","LONG","LAT")
