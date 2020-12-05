@@ -1,0 +1,144 @@
+.column {
+  float: left;
+  width: 47%;
+  padding: 0.8em;
+  height: 13em; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.button {
+  border: none;
+  color: red;
+  padding: 1.33em 2.67em;
+  text-align: center;
+  font-size: 1.33em;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  width: 100%
+}
+
+.button:hover {opacity: 1}
+
+.position{
+	font-size: 2em;
+	color: red;
+}
+
+h1{
+	text-align: center;
+	font-size: 3em;
+	/*color: #4d0099;*/
+	background: -webkit-linear-gradient(#009900, #9933ff);
+  	-webkit-background-clip: text;
+ 	-webkit-text-fill-color: transparent;
+}
+
+h3{
+	text-align: center;
+	color: #00b377;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 2.5em;
+	font-weight: bold;
+
+}
+
+h4{
+	text-align: center;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 5em;
+	font-weight: bold;
+	background: -webkit-linear-gradient(#754536, #75c2b2);
+  	-webkit-background-clip: text;
+ 	-webkit-text-fill-color: transparent;
+
+}
+
+div.polaroid {
+  width: 23em;
+  padding: 0.8em 0.8em 0.8em 0.8em;
+  border: 1px solid #BFBFBF;
+  background-color: white;
+  box-shadow: 0.8em 0.8em 0.417em #b3cccc;
+  position: relative;
+}
+
+div.polaroid_1 {
+  width: 80%;
+  padding: 2em 0.8em 0.8em 0.8em;
+  border: 1px solid #BFBFBF;
+  background-color: white;
+  box-shadow: 0.8em 0.8em 0.417em #b3cccc;
+}
+
+div.polaroid_2{
+  width: 30em;
+  padding: 0.8em 0.8em 0.8em 0.8em;
+  border: 1px solid #BFBFBF;
+  background-color: white;
+  box-shadow: 0.8em 0.8em 0.417em #b3cccc;
+}
+
+div.rotate_right {
+  float: left;
+  -ms-transform: rotate(7deg); /* IE 9 */
+  -webkit-transform: rotate(7deg); /* Safari */
+  transform: rotate(7deg);
+}
+
+div.rotate_left {
+  float: left;
+  -ms-transform: rotate(-8deg); /* IE 9 */
+  -webkit-transform: rotate(-8deg); /* Safari */
+  transform: rotate(-8deg);
+}
+div.rotate_right_1{
+  float: left;
+  -ms-transform: rotate(5deg); /* IE 9 */
+  -webkit-transform: rotate(5deg); /* Safari */
+  transform: rotate(5deg);
+}
+
+div.rotate_left_1 {
+  float: left;
+  -ms-transform: rotate(-5deg); /* IE 9 */
+  -webkit-transform: rotate(-5deg); /* Safari */
+  transform: rotate(-5deg);
+}
+.p_info{
+	padding-left: 13%;
+	background: #f9f2fc;
+}
+
+.preference{
+	padding-left: 13%;
+	background: #eff7f9;
+}
+
+.preference_1{
+	padding-left: 13%;
+	background: #f3f9ef;
+}
+
+.title{
+  	color: #00b377;
+  	font-size: 2em;
+  	/*padding: 40px;*/
+  	text-align: center;
+}
+
+.q_title{
+  	color: #00b377;
+  	font-size: 1.5em;
+  	/*padding: 40px;*/
+  	text-align: center;
+}

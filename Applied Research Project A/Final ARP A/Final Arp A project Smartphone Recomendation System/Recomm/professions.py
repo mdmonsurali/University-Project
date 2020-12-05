@@ -1,0 +1,25 @@
+# -*- coding: utf-8 -*-
+
+ACCOUNTANT = "Accountant"
+BUSINESSMAN = "Businessman"
+HEALTH_PROFESSIONAL = "Health Professional"
+IT = "IT"
+LAWYER = "Lawyer"
+PHOTOGRAPHER = "Photographer"
+POLICE_OFFICER = "Police Officer"
+PROFESSOR = "Professor"
+STUDENT = "Student"
+
+ACCOUNTANT_CODE = [0,0,0,0,0,0,0,0]
+BUSINESSMAN_CODE = [1,0,0,0,0,0,0,0]
+HEALTH_PROFESSIONAL_CODE = [0,1,0,0,0,0,0,0]
+IT_CODE = [0,0,1,0,0,0,0,0]
+LAWYER_CODE = [0,0,0,1,0,0,0,0]
+PHOTOGRAPHER_CODE = [0,0,0,0,1,0,0,0]
+POLICE_OFFICER_CODE = [0,0,0,0,0,1,0,0]
+PROFESSOR_CODE = [0,0,0,0,0,0,1,0]
+STUDENT_CODE = [0,0,0,0,0,0,0,1]
+
+
+
+

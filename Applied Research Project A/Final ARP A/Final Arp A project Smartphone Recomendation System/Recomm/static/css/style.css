@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+
+h4{
+  text-align: center;
+  font-size: 3em;
+  /*color: #4d0099;*/
+  background: -webkit-linear-gradient(#009900, #9933ff);
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h6{
+  text-align: center;
+  font-size: 2.5em;
+  /*color: #4d0099;*/
+  background: -webkit-linear-gradient(#009900, #9933ff);
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#S_name{
+  text-align: left;
+  margin-left: 18%;
+  background: -webkit-linear-gradient(#009900, #9933ff);
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bold_text{
+    font-weight: bold;
+}
+
+.para_style{
+    text-align: centre;
+    color : red;
+    font-size : 5px;
+}
+
+#spec{
+  text-align: center;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.image{
+  width: 30em;
+  height: 31em;
+  text-align: center;
+}
+
+.major_recommendation{
+  width: 100%;
+  height: 76%;
+}
+
+.container{
+  margin-left: 10%;
+}
+
+.description{
+text-align: center;
+}
+
+.MajorImage{
+	height: 200px;
+	vertical-align: middle;
+}
+
+.MajorDescription{
+	display: inline-block;
+}
+
+.RecommendImage{
+    height: 200px;
+    text-align: center;
+}
+
+#box_maintain{
+    text-align : center;
+}
+
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+
+.V_image{
+    width : 80%;
+    text-align : center;
+    margin-left : 10%;
+}
+
+

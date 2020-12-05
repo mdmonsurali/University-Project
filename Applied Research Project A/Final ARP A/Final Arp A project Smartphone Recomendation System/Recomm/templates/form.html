@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Recommender System</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static/css/form.css">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/form.css') }}">
+<link rel="stylesheet" href="static/css/style_index.css">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style_index.css') }}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+</head>
+<body>
+  <section id="nav-bar">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="Recommendation_System#home">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Recommendation_System#about">About US</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Recommendation_System#services">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Recommendation_System#team">Our Team</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="visualization">Visualization</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index">Smartphone Recommendor</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Recommendation_System#contact">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>  
+</section>
+ <div>
+          <br>
+    </div> 
+	<h1>Smartphone Recommendation System</h1>
+    <div>
+          <br>
+    </div> 
+	<form name = "p_data" action="/index" method="post">
+    <div class="p_info">
+      <h4> Personal Informations </h4>
+        <div class ="row">
+          <div class="col-md-6"> 
+        		<div class = "polaroid rotate_right">
+          		<label for="age" class = title>Age</label><br>
+          		<input type="radio" id="age" name="user_age" value="Less than 20"> Less than 20<br>
+          		<input type="radio" id="age" name="user_age" value="20-30" checked> Between 20-30<br>
+        			<input type="radio" id="age" name="user_age" value="30-40"> Between 30-40<br>
+        			<input type="radio" id="age" name="user_age" value="40-50" > Between 40-50<br>
+        			<input type="radio" id="age" name="user_age" value="40-50" > Between 50-60<br>
+        			<input type="radio" id="age" name="user_age" value="40-50"> Above 60<br>
+        		</div>
+          </div>
+          <div>
+          <br>
+          </div> 
+          <div class="col-md-6">
+        		<div class=" polaroid rotate_left">
+          		<label for="sex" class= title >Gender</label><br>
+          		<input type="radio" id="sex" name="user_sex" value="Male" checked> Male<br>
+        			<input type="radio" id="sex" name="user_sex" value="Female"> Female<br>
+        		</div>
+          </div>
+        </div>
+        <div>
+          <br>
+        </div> 
+        <div class="row">
+          <div class="col-md-6">
+            <div class = "polaroid rotate_left_1">
+              <label for="income" class="title">Annual Income</label><br>
+              <input type="radio" id="income" name="user_income" value="below €10,000" checked> Below 10,000 Euro<br>
+              <input type="radio" id="income" name="user_income" value="€10,000-€20,000" > Between 10.000 - 20,000 Euro<br>
+              <input type="radio" id="income" name="user_income" value="above €20,000"> Above 20,000 Euro<br>
+            </div>
+          </div>
+          <div>
+          <br>
+          </div> 
+          <div class="col-md-6">
+            <div class="polaroid rotate_right_1">
+              <label for="profession" class="title">Profession</label><br>
+              <input type="radio" id="profession" name="user_profession" value="Businessman" > Businessman<br>
+              <input type="radio" id="profession" name="user_profession" value="Accountant"> Accountant<br>
+              <input type="radio" id="profession" name="user_profession" value="Health Professional" > Health Professional<br>
+              <input type="radio" id="profession" name="user_profession" value="IT"> IT<br>
+              <input type="radio" id="profession" name="user_profession" value="Lawyer" > Lawyer<br>
+              <input type="radio" id="profession" name="user_profession" value="Photographer"> Photographer<br>
+              <input type="radio" id="profession" name="user_profession" value="Police Officer" > Police Officer<br>
+              <input type="radio" id="profession" name="user_profession" value="Professor"> Professor<br>
+              <input type="radio" id="profession" name="user_profession" value="Student" checked> Student<br>
+            </div>       
+          </div>
+        </div>
+        <div>
+          <br><br>
+        </div>
+      		<div class="polaroid_1">
+            <label for="willing_amount" class="title">How much amount do you want to pay for smartphone?</label><br>
+              <input type="radio" id="willing_amount" name="user_willing_amount" value="below €300"> Below 300 Euro<br>
+              <input type="radio" id="willing_amount" name="user_willing_amount" value="€300-€700" checked> Between 300-700 Euro<br>
+              <input type="radio" id="willing_amount" name="user_willing_amount" value="above €700"> Above 700 Euro<br>
+      		</div>
+    </div>
+      <div>
+          <br>
+      </div> 
+    <div class="preference">
+      <h4>Personal Preference</h4>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="polaroid_2 rotate_right">
+              <label for="os" class="q_title">Which operating system do you prefer?</label><br>
+              <input type="radio" id="os" name="user_os" value="Android" checked> Android<br>
+              <input type="radio" id="os" name="user_os" value="iOS"> iOS<br>
+              <input type="radio" id="os" name="user_os" value="Windows" > Windows<br>
+            </div>
+          </div>  
+          <div>
+          <br>
+          </div>     
+          <div class="col-md-6">
+            <div class="polaroid_2 rotate_left">
+              <label for="os" class="q_title">What do you prefer most to buy the Smartphone?</label><br>
+              <input type="radio" id="reason" name="user_reason" value="Brand" > Brand<br>
+              <input type="radio" id="reason" name="user_reason" value="Features" checked> Features<br>
+              <input type="radio" id="reason" name="user_reason" value="Price" > Price<br>
+              <input type="radio" id="reason" name="user_reason" value="Security" > Security<br> 
+            </div>
+          </div>
+        </div>
+         <div>
+          <br><br>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="polaroid_2 rotate_left_1">
+              <label for="game" class="q_title">Do you play high graphics game?</label><br>
+              <input type="radio" id="game" name="user_game" value="Yes" > Yes<br>
+              <input type="radio" id="game" name="user_game" value="No" checked> No<br> 
+            </div>
+          </div>   
+          <div>
+          <br><br>
+          </div>   
+          <div class="col-md-6">
+            <div class="polaroid_2 rotate_right_1">
+              <label for="photography" class="q_title">Do you use smartphone for photography?</label><br>
+              <input type="radio" id="photography" name="user_photography" value="Yes" checked> Yes<br>
+              <input type="radio" id="photography" name="user_photography" value="No" > No<br> 
+            </div>
+          </div>
+        </div>
+    </div>
+      <div>
+          <br>
+      </div> 
+    <div class="preference_1">
+      <h4>Features</h4>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="polaroid_2 rotate_right">
+              <label for="camera" class="q_title">Do you need more than 12 MP camera?</label><br>
+              <input type="radio" id="camera" name="user_camera" value="Yes" checked> Yes<br>
+              <input type="radio" id="camera" name="user_camera" value="No" > No<br>
+            </div>
+          </div>  
+          <div>
+          <br>
+          </div>     
+          <div class="col-md-6">
+            <div class="polaroid_2 rotate_left">
+              <label for="battery" class="q_title">Do you need more than 3000 mAh battery?</label><br>
+              <input type="radio" id="battery" name="user_battery" value="Yes" checked> Yes<br>
+              <input type="radio" id="battery" name="user_battery" value="No"> No<br>
+            </div>
+          </div>
+        </div>
+         <div>
+          <br><br>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="polaroid_2 rotate_left_1">
+              <label for="processor" class="q_title">Do you need high speed Processor?</label><br>
+              <input type="radio" id="processor" name="user_processor" value="Yes" > Yes<br>
+              <input type="radio" id="processor" name="user_processor" value="No" checked> No<br> 
+            </div>
+          </div>   
+          <div>
+          <br><br>
+          </div>   
+          <div class="col-md-6">
+            <div class="polaroid_2 rotate_right_1">
+              <label for="storage" class="q_title">Do you need more than 64 GB internal Memory(ROM)?</label><br>
+              <input type="radio" id="storage" name="user_storage" value="Yes" > Yes<br>
+              <input type="radio" id="storage" name="user_storage" value="No" checked> No<br> 
+            </div>
+          </div>
+        </div>
+        <div>
+          <br>
+         </div> 
+        <div class="polaroid_1">
+            <label for="resolution" class="title">Do you need more than 1024*1920 screen resolution?</label><br>
+            <input type="radio" id="resolution" name="user_resolution" value="Yes" checked> Yes<br>
+            <input type="radio" id="resolution" name="user_resolution" value="No"> No<br>
+          </div>
+    </div>
+  		<div class="button">
+ 			 <button type="submit" class="position">Recommend Now</button>
+		</div>
+	</form>
+
+  <section id="footer">
+     <div class="container text-center">
+       <p>Made for <i class="fa fa-copyright"></i> ARP A</p>
+     </div>
+   </section>
+
+   <!---------Footer--------->
+
+  
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Recommendation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="static/css/style.css">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+  <link rel="stylesheet" href="static/css/style_index.css">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style_index.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>  
+</head>
+<body>
+  <section id="nav-bar">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ">
+      <li class="nav-item active">
+        <a class="nav-link" href="Recommendation_System#home">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Recommendation_System#about">About US</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Recommendation_System#services">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Recommendation_Systemteam">Our Team</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="visualization">Visualization</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index">Smartphone Recommendor</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Recommendation_System#contact">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>  
+</section>
+	<div class="major_recommendation"> 
+	<br>
+    <h4 id="S_name" class="title" >{{name}}</h4>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-4" id= "box_maintain">
+            <img class="image" src={{url}} alt="Bitte warten">
+      </div>
+      <div class="col-xl-6" id= "box_maintain" >
+        <h4> Specification</h4>
+        <table id="t01">
+              <tr>
+                <td class="bold_text">Operating System</td>
+                <td>{{OS}}</td> 
+              </tr>
+              <tr>
+                <td class="bold_text">Display Resolution</td>
+                <td>{{Screen}}</td>
+              </tr>
+              <tr>
+                <td class="bold_text">Display Size</td>
+                <td>{{Display_size}}</td>
+              </tr>
+              <tr>
+                <td class="bold_text">RAM</td>
+                <td>{{RAM}}</td>
+              </tr>
+              <tr>
+                <td class="bold_text">ROM/Internal Storage</td>
+                <td>{{Memory}}</td> 
+              </tr>
+              <tr>
+                <td class="bold_text">Selfie Camera</td>
+                <td>{{S_camera}}</td>
+              </tr>
+              <tr>
+                <td class="bold_text">Main Camera </td>
+                <td>{{M_Camera}}</td>
+              </tr>
+              <tr>
+                <td class="bold_text">Battery</td>
+                <td>{{Battery}}mAh</td>
+              </tr>
+              <tr>
+                <td class="bold_text">Price</td>
+                <td> €{{Price}}</td>
+              </tr>
+            </table>
+        </div>
+    </div>
+  </div>
+  <div><br></div>
+  <div>
+    <h4 class="title">Other Alternatives</h4>
+  </div>
+	<div class="container">
+      <div class="row">
+      <div class="col-md-3" id= "box_maintain">
+        <a href="Other_recomm1">
+        <img src={{url1}} class="RecommendImage" alt="Bitte warten">
+        </a>
+        <p class="description">{{phone1}}</p>
+        <p class="description">€{{other_recomm1_price_euro}}</p>
+      </div>
+      <div class="col-md-3" id= "box_maintain">
+        <a href="Other_recomm2">
+        <img src={{url2}} class="RecommendImage" alt="Bitte warten">
+        </a>
+        <p class="description">{{phone2}}</p>
+        <p class="description">€{{other_recomm2_price_euro}}</p>
+      </div>
+      <div class="col-md-3" id= "box_maintain">
+        <a href="Other_recomm3">
+        <img src={{url3}} class="RecommendImage" alt="Bitte warten">
+        </a>
+        <p class="description">{{phone3}}</p>
+        <p class="description">€{{other_recomm3_price_euro}}</p>
+      </div>
+      <div class="col-md-3" id= "box_maintain">
+        <a href="Other_recomm4">
+        <img src={{url4}} class="RecommendImage"alt="Bitte warten">
+        </a>
+        <p class="description">{{phone4}}</p>
+        <p class="description">€{{other_recomm4_price_euro}}</p>
+      </div>
+    </div>
+  </div>
+  <section id="footer">
+     <div class="container text-center">
+       <p>Made for <i class="fa fa-copyright"></i> ARP A</p>
+     </div>
+   </section>
+
+   <!---------Footer--------->
+
+   
+</body>
+</html>

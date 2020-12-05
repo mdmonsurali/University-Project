@@ -1,0 +1,11 @@
+# -*- coding: utf-8 -*-
+BELOW_20 = "Less than 20"
+BETWEEN_20_30 = "20-30"
+BETWEEN_30_40 = "30-40"
+BETWEEN_40_50 = "40-50"
+
+BETWEEN_20_30_CODE =  [0,0,0]
+BETWEEN_30_40_CODE = [1,0,0]
+BETWEEN_40_50_CODE = [0,1,0]
+BELOW_20_CODE = [0,0,1]
+
